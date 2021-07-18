@@ -1,0 +1,11 @@
+.content {
+    grid-area: c;
+    background-color: crimson;
+    padding: 20px;
+}
+.content img {
+    width: 800px;
+}
+.item {
+    color: greenyellow
+}
