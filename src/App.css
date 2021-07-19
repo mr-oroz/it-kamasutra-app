@@ -10,4 +10,9 @@
     max-width: 1068px;
 }
 
+.app-wrapper-content {
+    grid-area: c;
+    background-color: #D1D9D9;
+    padding: 20px;
+}
 
