@@ -9,7 +9,9 @@
     margin: 0 auto;
     max-width: 1068px;
 }
-
+* {
+    box-sizing: border-box;
+}
 .app-wrapper-content {
     grid-area: c;
     background-color: #D1D9D9;

@@ -1,16 +1,12 @@
 import React from 'react';
 import classes from './Profile.module.css';
 import MyPost from './MyPost/MyPost';
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = () => {
     return (
         <section>
-            <div>
-                <img src='https://vjoy.cc/wp-content/uploads/2019/07/1-1.jpg' />
-            </div>
-            <div>
-                ava + decription
-            </div>
+            <ProfileInfo/>
             <MyPost />
         </section>
     );

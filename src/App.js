@@ -5,9 +5,9 @@ import Navbar from './components/Navbar/Navbar';
 import Dialogs from "./components/Dialogs/Dialogs";
 import {
     BrowserRouter as Router,
-    Switch,
+    // Switch,
     Route,
-    Link
+    // Link
 } from "react-router-dom";
 
 function App() {
