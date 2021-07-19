@@ -14,6 +14,11 @@ const MyPost = () => {
             </div>
             <div className={classes.posts}>
                 <Post />
+                <Post />
+                <Post />
+                <Post />
+                <Post />
+                <Post />
             </div>
         </div>
     );
