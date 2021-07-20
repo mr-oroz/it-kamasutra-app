@@ -5,20 +5,23 @@ import Navbar from './components/Navbar/Navbar';
 import Dialogs from "./components/Dialogs/Dialogs";
 import {
     BrowserRouter as Router,
-    // Switch,
     Route,
-    // Link
 } from "react-router-dom";
 
-function App() {
+
+function App(props) {
+    const ProfileCompoment = () => <Profile
+        data={props.state.ProfilePage}/>
+    const DialogsCompoment = () => <Dialogs
+        data={props.state.MessagePage}/>
     return (
         <Router>
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>
                 <div className={'app-wrapper-content'}>
-                    <Route path='/profile' component={Profile}/>
-                    <Route path ='/dialogs' component={Dialogs}/>
+                    <Route path='/profile' render={ProfileCompoment}/>
+                    <Route path='/dialogs' render={DialogsCompoment}/>
                 </div>
             </div>
         </Router>
