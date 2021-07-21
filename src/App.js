@@ -11,9 +11,9 @@ import {
 
 function App(props) {
     const ProfileCompoment = () => <Profile
-        data={props.state.ProfilePage}/>
+        data={props.state.ProfilePage} addPost={props.addPost}/>
     const DialogsCompoment = () => <Dialogs
-        data={props.state.MessagePage}/>
+        data={props.state.MessagePage} />
     return (
         <Router>
             <div className="app-wrapper">
