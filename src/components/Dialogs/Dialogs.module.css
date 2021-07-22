@@ -2,9 +2,7 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
 }
-.dialogsItems {
 
-}
 .dialog a{
     text-decoration: none;
     color: #222222;
@@ -17,7 +15,4 @@
     width: 50px;
     border: 1px solid black;
     margin: 0 5px;
-}
-.dialog img.activeImg {
-    border: 3px solid crimson;
 }
