@@ -16,3 +16,9 @@
     border: 1px solid black;
     margin: 0 5px;
 }
+
+.btn button{
+    padding: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+}

@@ -1,3 +1,5 @@
+import {RenderEntireThree} from "../render";
+
 const state = {
     ProfilePage: {
         postData: [
@@ -5,7 +7,8 @@ const state = {
             {id: 2, message: 'Hello World', likeCount: 25},
             {id: 3, message: 'blala', likeCount: 2},
             {id: 5, message: 'dada', likeCount: 0},
-        ]
+        ],
+        newPost: 'it-camasutra-app',
     },
     MessagePage: {
         messegeData: [
@@ -24,13 +27,19 @@ const state = {
     },
 }
 
-export const addPost = (postMessage) => {
+export const addPost = () => {
     let newPost = {
         id: 5,
-        message: postMessage,
+        message: state.ProfilePage.newPost,
         likeCount: 0
     };
-    state.ProfilePage.postData.push(newPost)
+    state.ProfilePage.postData.push(newPost);
+    state.ProfilePage.newPost = '';
+    RenderEntireThree(state);
+}
+export const updateNewPostText = (newText) => {
+    state.ProfilePage.newPost = newText
+    RenderEntireThree(state)
 }
 
 export default state;

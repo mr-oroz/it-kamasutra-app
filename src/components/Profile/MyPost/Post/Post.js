@@ -10,7 +10,7 @@ const Post = (props) => {
                     <img src='https://cdn.iconscout.com/icon/free/png-512/boy-avatar-4-1129037.png' />
                     {props.message}
                 </div>
-                <span>line: {props.likeCount}</span>
+                <span>like: {props.likeCount}</span>
             </div>
         </>
     );
