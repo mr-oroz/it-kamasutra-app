@@ -1,4 +1,6 @@
-import {RenderEntireThree} from "../render";
+let RenderEntireThree = () => {
+    console.log('State')
+}
 
 const state = {
     ProfilePage: {
@@ -40,6 +42,10 @@ export const addPost = () => {
 export const updateNewPostText = (newText) => {
     state.ProfilePage.newPost = newText
     RenderEntireThree(state)
+}
+
+export const subscribe = (observer) => {
+    RenderEntireThree = observer //наблюдатель
 }
 
 export default state;
