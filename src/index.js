@@ -1,20 +1,19 @@
 import React from 'react';
-import state, {subscribe} from './redux/state'
+import store  from './redux/state'
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {addPost, updateNewPostText} from "./redux/state";
 
-export const RenderEntireThree = () => {
+export const RenderEntireThree = (state) => {
     ReactDOM.render(
         <React.StrictMode>
-            <App addPost={addPost} state={state} updateNewPostText={updateNewPostText}/>
+            <App addPost={store.addPost.bind(store)} state={state} updateNewPostText={store.updateNewPostText.bind(store)}/>
         </React.StrictMode>,
         document.getElementById('root')
     );
 
 }
 
-RenderEntireThree(state)
+RenderEntireThree(store.state)
 
-subscribe(RenderEntireThree)
+store.subscribe(RenderEntireThree)
