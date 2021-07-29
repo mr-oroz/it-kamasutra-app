@@ -15,8 +15,7 @@ import {
 function App(props) {
     const ProfileCompoment = () => <Profile
         data={props.state.ProfilePage}
-        updateNewPostText={props.updateNewPostText}
-        addPost={props.addPost}
+        dispatch={props.dispatch}
     />;
     const DialogsCompoment = () => <Dialogs data={props.state.MessagePage}/>;
     return (

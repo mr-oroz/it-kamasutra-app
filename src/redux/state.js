@@ -47,22 +47,37 @@ const store = {
     RenderEntireThree() {
         console.log('State')
     },
-    addPost() {
-        let newPost = {
-            id: 5,
-            message: this.state.ProfilePage.newPost,
-            likeCount: 0
-        };
-        this.state.ProfilePage.postData.push(newPost);
-        this.state.ProfilePage.newPost = '';
-        this.RenderEntireThree(this.state);
-    },
-    updateNewPostText(newText) {
-        this.state.ProfilePage.newPost = newText
-        this.RenderEntireThree(this.state)
-    },
     subscribe(observer) {
         this.RenderEntireThree = observer //наблюдатель
+    },
+    // addPost() {
+    //     let newPost = {
+    //         id: 5,
+    //         message: this.state.ProfilePage.newPost,
+    //         likeCount: 0
+    //     };
+    //     this.state.ProfilePage.postData.push(newPost);
+    //     this.state.ProfilePage.newPost = '';
+    //     this.RenderEntireThree(this.state);
+    // },
+    // updateNewPostText(newText) {
+    //     this.state.ProfilePage.newPost = newText
+    //     this.RenderEntireThree(this.state)
+    // },
+    dispatch (action) {
+        if (action.type === "ADD-POST") {
+            let newPost = {
+                id: 5,
+                message: this.state.ProfilePage.newPost,
+                likeCount: 0
+            };
+            this.state.ProfilePage.postData.push(newPost);
+            this.state.ProfilePage.newPost = '';
+            this.RenderEntireThree(this.state);
+        } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+            this.state.ProfilePage.newPost = action.newText
+            this.RenderEntireThree(this.state)
+        }
     }
 }
 
