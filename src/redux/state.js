@@ -1,3 +1,5 @@
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const ADD_POST = 'ADD-POST';
 const store = {
     state: {
         ProfilePage: {
@@ -64,7 +66,7 @@ const store = {
     //     this.state.ProfilePage.newPost = newText
     //     this.RenderEntireThree(this.state)
     // },
-    dispatch (action) {
+    dispatch(action) {
         if (action.type === "ADD-POST") {
             let newPost = {
                 id: 5,
@@ -81,5 +83,8 @@ const store = {
     }
 }
 
+export const addPostActionCreator = () => ({type: ADD_POST});
+export const updateNewPostTextCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text});
 
-export default store
+
+export default store;
